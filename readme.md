@@ -39,6 +39,32 @@ Some basic information on interacting with the vagrant box
 * Password: root
 * DB Name: database
 
+## For Mysql error as: "2013 - Lost connection to MySQL server at 'reading initial communication packet', system error: 0"
+Follow 4 steps:
+
+* 1. Connect to ubuntu with ssh
+`vagrant ssh`
+
+* 2. Edit Mysql Configuration:
+`sudo nano /etc/mysql/my.cnf`
+
+* 3. Find the bind-address 127.0.0.1 and comment it out. 
+# bind-address 127.0.0.1
+
+* 4. Restart mysql service
+`sudo /etc/init.d/mysql restart`
+
+## To install Sqlite for Php5:
+Follow 3 steps:
+
+* 1. Connect to ubuntu with ssh
+`vagrant ssh`
+
+* 2. Install php5-sqlite
+`sudo apt-get install php5-sqlite`
+
+* 3. Restart apache server
+`sudo /etc/init.d/apache2 restart`
 
 ### PHP XDebug
 
