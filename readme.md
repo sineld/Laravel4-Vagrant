@@ -49,7 +49,7 @@ Follow these steps:
 `sudo nano /etc/mysql/my.cnf`
 
 * Find the bind-address 127.0.0.1 and comment it out. 
-# bind-address 127.0.0.1
+`# bind-address 127.0.0.1`
 
 * Restart mysql service
 `sudo /etc/init.d/mysql restart`
